@@ -48,9 +48,6 @@ class UdpSocket extends InetSocket implements Connection
 
         // suppress all errors
         @fwrite($this->socket, $message);
-
-        // sleeping for 10 millionths of a second dramatically improves UDP reliability
-        usleep(10);
     }
 
     /**
